@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>注册</title>
+
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="./bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <script src="./bootstrap-4.6.0-dist/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="./bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" rev="stylesheet" type="text/css" href="./css/style.css">
+
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="./img/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="./img/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="./img/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="./json/manifest.json">
+<link rel="mask-icon" href="./imgsafari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="./img/favicon.ico">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+    </style>
+<style>
+  form {
+    width: 400px;
+    margin: auto;
+    margin-top: 50px;
+  }
+
+  .form-group {
+    margin-bottom: 30px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
+    
+    <!-- Custom styles for this template -->
+    <link href="./css/pricing.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal">B网</h5>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a class="p-2 text-dark" href="./index.html">主页</a>
+    <a class="p-2 text-dark" href="./film.html">电影</a>
+    <a class="p-2 text-dark" href="./tvplay.html">剧集</a>
+    <a class="p-2 text-dark" href="./pricing.html">会员购买</a>
+    <a class="p-2 text-dark" href="./login.html">登录</a>
+  </nav>
+  <a class="btn btn-outline-primary" href="./signup.html">Sign up</a>
+</div>
+
+
+
+<!--这里写代码-->
+<form>
+  <div class="form-group">
+    <label for="username">Username:</label>
+    <input type="text" class="form-control" id="username" placeholder="Enter username">
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" class="form-control" id="password" placeholder="Enter password">
+  </div>
+  <div class="form-group">
+    <label for="confirm-password">Confirm Password:</label>
+    <input type="password" class="form-control" id="confirm-password" placeholder="Confirm password">
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter email">
+  </div>
+  <button type="submit" class="btn btn-primary">注册</button>
+</form>
+<script>
+  // 获取表单元素
+  var form = document.querySelector('form');
+
+  // 获取用户名、密码、再次输入密码和邮箱输入框
+var usernameInput = document.querySelector('#username');
+var passwordInput = document.querySelector('#password');
+var confirmPasswordInput = document.querySelector('#confirm-password');
+var emailInput = document.querySelector('#email');
+
+// 在用户提交表单时触发 JavaScript 函数
+form.addEventListener('submit', function(event) {
+// 阻止默认表单提交行为
+event.preventDefault();
+// 检查用户输入的信息是否符合要求
+if (usernameInput.value === '') {
+  // 如果用户名为空，弹出警告框
+  alert('请输入你的用户名!');
+} else if (passwordInput.value === '') {
+  // 如果密码为空，弹出警告框
+  alert('请输入你的密码!');
+} else if (passwordInput.value !== confirmPasswordInput.value) {
+  // 如果密码和再次输入的密码不一致，弹出警告框
+  alert('两次密码不一致!');
+} else if (emailInput.value === '') {
+  // 如果邮箱为空，弹出警告框
+  alert('填写邮箱!');
+} else {
+  // 如果用户输入的信息符合要求，执行注册功能
+  alert('你已经注册成功!');
+}
+});
+</script>
+<!--这里结束-->
+
+
+
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img class="mb-2" src="./img/bootstrap-solid.svg" alt="" width="24" height="24">
+        <small class="d-block mb-3 text-muted">&copy; 2017-2022</small>
+      </div>
+      <div class="col-6 col-md">
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">常见问题</a></li>
+          <li><a class="text-muted" href="#">投资人联系</a></li>
+          <li><a class="text-muted" href="#">隐私权</a></li>
+          <li><a class="text-muted" href="#">速度测试</a></li>
+          <li><a class="text-muted" href="#">说明中心</a></li>
+          <li><a class="text-muted" href="#">工作机会</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">说明中心</a></li>
+          <li><a class="text-muted" href="#">工作机会</a></li>
+          <li><a class="text-muted" href="#">Cookie设定</a></li>
+          <li><a class="text-muted" href="#">法律声明</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">账户</a></li>
+          <li><a class="text-muted" href="#">观赏方式</a></li>
+          <li><a class="text-muted" href="#">企业资讯</a></li>
+          <li><a class="text-muted" href="#">B网独家</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>
+  </body>
+</html>
